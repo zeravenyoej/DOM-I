@@ -42,7 +42,6 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-
 //****************** HEADER ********************************* */
 const headerLinks = document.querySelectorAll('nav a');
 
@@ -73,9 +72,17 @@ headerLinks[5].textContent = 'Contact';
 //   headerLinks.append(link);
 // })
 
+
+//******** TRYING TO ADD INDIVIDUAL LINK TO THE NAV BAR */
+// const firstNav = document.createElement('a');
+// firstNav.textContent = 'First Nav';
+// headerLinks.prepend(firstNav);
+
+
 headerLinks.forEach(function (link) {
   link.style.color = 'green';
 })
+
 
 //****************** .CTA (STUFF UNDER HEADER) ********************************* */
 const h1Text = document.querySelector('h1');
@@ -122,9 +129,7 @@ contactP[2].textContent = 'sales@greatidea.io';
 
 //******************************** FOOTER ******************************** */
 
-// const footer = document.createElement('footer');
-// const footerPTag = document.createElement('footer p');
-// const footerText = document.querySelector('footer p');
-// footerText.textContent = 'Copyright Great Idea! 2018';
 
-// footer.append(footerPTag);
+const footerText = document.querySelector('footer p');
+footerText.textContent = 'Copyright Great Idea! 2018';
+
