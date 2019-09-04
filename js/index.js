@@ -52,37 +52,22 @@ headerLinks[3].textContent = 'Features';
 headerLinks[4].textContent = 'About';
 headerLinks[5].textContent = 'Contact';
 
+const nav = document.querySelector('header nav');
 
-// ***** TRYING TO WRITE A FUNCTION TO AVOID HARD CODING THE TEXT CONTENT ************/
-// THE CODE BELOW ALWAYS ENDS ON THE LAST ITEM IN THE ARRAY
+const firstNav = document.createElement('a');
+const lastNav = document.createElement('a');
+firstNav.textContent = 'first';
+lastNav.textContent = 'last'; 
+firstNav.style.color = 'green';
+lastNav.style.color = 'green';
 
-// headerLinkNames = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact']
-// headerLinks.forEach(function(link){
-//   for (let i = 0;i < headerLinkNames.length; i++){
-//     link.textContent = headerLinkNames[i];
-//   }
-// })
-
-
-//***** TRYING TO ADD NEW LINKS TO THE NAV BAR ************** */
-// const headerLinkNames = ['new', 'other'];
-// headerLinkNames.forEach(name => {
-//   const link = document.createElement('a');
-//   link.textContent = name;
-//   headerLinks.append(link);
-// })
-
-
-//******** TRYING TO ADD INDIVIDUAL LINK TO THE NAV BAR */
-// const firstNav = document.createElement('a');
-// firstNav.textContent = 'First Nav';
-// headerLinks.prepend(firstNav);
+nav.prepend(firstNav);
+nav.append(lastNav);
 
 
 headerLinks.forEach(function (link) {
   link.style.color = 'green';
 })
-
 
 //****************** .CTA (STUFF UNDER HEADER) ********************************* */
 const h1Text = document.querySelector('h1');
