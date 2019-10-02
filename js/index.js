@@ -41,9 +41,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// const nav = docuement.querySelector('nav');
-// nav.textContent = siteContent['nav']['nav-item-1'];
+//*****************HEADER *****************************************/
+const headerLinks = document.querySelectorAll('nav a');
+headerLinks[0].textContent = siteContent['nav']['nav-item-1'];
+headerLinks[1].textContent = siteContent['nav']['nav-item-2'];
+headerLinks[2].textContent = siteContent['nav']['nav-item-3'];
+headerLinks[3].textContent = siteContent['nav']['nav-item-4'];
+headerLinks[4].textContent = siteContent['nav']['nav-item-5'];
+headerLinks[5].textContent = siteContent['nav']['nav-item-6'];
 
+
+// ************************** CTA ***************************************/
 const dom = document.querySelector('h1');
 dom.textContent=siteContent['cta']['h1'];
 
@@ -52,3 +60,33 @@ button.textContent = siteContent['cta']['button'];
 
 const mainImg = document.querySelector('#cta-img');
 mainImg.src=siteContent['cta']['img-src'];
+
+// ******************************** h4s ********************/
+const h4s = document.querySelectorAll('h4');
+h4s[0].textContent=siteContent['main-content']['features-h4'];
+h4s[1].textContent=siteContent['main-content']['about-h4'];
+h4s[2].textContent=siteContent['main-content']['services-h4'];
+h4s[3].textContent=siteContent['main-content']['product-h4'];
+h4s[4].textContent=siteContent['main-content']['vision-h4'];
+h4s[5].textContent=siteContent['contact']['contact-h4'];
+
+// **************************** P-TAGS *****************************/
+const ps= document.querySelectorAll('p');
+ps[0].textContent=siteContent['main-content']['features-content'];
+ps[1].textContent=siteContent['main-content']['about-content'];
+ps[2].textContent=siteContent['main-content']['services-content'];
+ps[3].textContent=siteContent['main-content']['product-content'];
+ps[4].textContent=siteContent['main-content']['vision-content'];
+ps[5].textContent=siteContent['contact']['address'];
+ps[6].textContent=siteContent['contact']['phone'];
+ps[7].textContent=siteContent['contact']['email'];
+
+// ************************************ MAIN IMAGE *****************/
+const middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// **************************** FOOTER *****************************/
+const footer = document.querySelector(' footer p')
+footer.textContent=siteContent['footer']['copyright'];
+
+
