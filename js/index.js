@@ -106,3 +106,18 @@ middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 const footer = document.querySelector(' footer p')
 footer.textContent=siteContent['footer']['copyright'];
 
+//********************** STRECH GOAL ***************************/
+const newButton = document.createElement('button');
+newButton.textContent='New Button';
+const buttonDiv = document.querySelector('.cta-text');
+buttonDiv.append(newButton);
+newButton.style.background='blue';
+newButton.style.color="white";
+
+const goLeft= function (event) {
+  return event.target.style.paddingRight = '500px';
+}
+newButton.addEventListener('click', goLeft);
+
+const container = document.querySelector('body');
+container.style.background='#E3ECEC';
