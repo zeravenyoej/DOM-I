@@ -50,6 +50,23 @@ headerLinks[3].textContent = siteContent['nav']['nav-item-4'];
 headerLinks[4].textContent = siteContent['nav']['nav-item-5'];
 headerLinks[5].textContent = siteContent['nav']['nav-item-6'];
 
+headerLinks[0].style.color='green';
+headerLinks[1].style.color='green';
+headerLinks[2].style.color='green';
+headerLinks[3].style.color='green';
+headerLinks[4].style.color='green';
+headerLinks[5].style.color='green';
+
+//Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+const nav = document.querySelector('nav');
+const firstLink = document.createElement('a');
+firstLink.textContent='first';
+nav.prepend(firstLink);
+
+const lastLink = document.createElement('a');
+lastLink.textContent='last';
+nav.appendChild(lastLink);
+
 
 // ************************** CTA ***************************************/
 const dom = document.querySelector('h1');
@@ -88,5 +105,4 @@ middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 // **************************** FOOTER *****************************/
 const footer = document.querySelector(' footer p')
 footer.textContent=siteContent['footer']['copyright'];
-
 
